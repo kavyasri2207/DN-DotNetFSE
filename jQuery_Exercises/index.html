@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Exercises</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Exercise 1: jQuery Library Inclusion -->
+    <!-- 1. Using a CDN link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 2. Using a locally downloaded copy -->
+    <!-- Note: Uncomment the line below to use the local copy instead of the CDN.
+         Make sure to download the actual jQuery code into jquery.min.js! -->
+    <!-- <script src="jquery.min.js"></script> -->
+</head>
+<body>
+    <header>
+        <h1>jQuery Exercises</h1>
+    </header>
+    
+    <main>
+        <!-- Exercise 1 Bonus -->
+        <section class="exercise-section">
+            <h2>Exercise 1: Bonus</h2>
+            <p id="hello">Hello World!</p>
+            <small>Check your browser's Developer Tools Console to see the log!</small>
+        </section>
+
+        <!-- Exercise 2 -->
+        <section class="exercise-section">
+            <h2>Exercise 2: Selecting Elements</h2>
+            <div id="ex2">
+                <h1 id="mainTitle">Original Title</h1>
+                <p class="ex2-para">This is the first paragraph.</p>
+                <p class="ex2-para">This is the second paragraph.</p>
+                <button id="hideParaBtn">Hide One Paragraph</button>
+            </div>
+        </section>
+
+        <!-- Exercise 3 -->
+        <section class="exercise-section">
+            <h2>Exercise 3: jQuery Methods</h2>
+            <div id="ex3">
+                <div class="box-container">
+                    <div class="box" style="background-color: #e74c3c;"></div>
+                    <div class="box" style="background-color: #2ecc71;"></div>
+                    <div class="box" style="background-color: #3498db;"></div>
+                </div>
+                <div class="button-group">
+                    <button id="btnHide">.hide()</button>
+                    <button id="btnShow">.show()</button>
+                    <button id="btnFadeOut">.fadeOut()</button>
+                    <button id="btnFadeIn">.fadeIn()</button>
+                    <button id="btnToggle">.toggle()</button>
+                    <button id="btnChain">Bonus: Chain Methods</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 4 -->
+        <section class="exercise-section">
+            <h2>Exercise 4: DOM Manipulation</h2>
+            <div id="ex4">
+                <form id="itemForm">
+                    <input type="text" id="itemInput" placeholder="Enter list item..." required>
+                    <button type="submit">Add Item</button>
+                </form>
+                <ul id="itemList">
+                    <li>Sample Item</li>
+                </ul>
+                <button id="removeAllBtn" class="danger-btn">Remove All</button>
+            </div>
+        </section>
+
+        <!-- Exercise 5 -->
+        <section class="exercise-section">
+            <h2>Exercise 5: Handling User Interactions</h2>
+            <div id="ex5">
+                <button id="colorBtn">Change Color</button>
+                <div id="colorBox" class="interaction-box">Color Box</div>
+            </div>
+        </section>
+
+        <!-- Exercise 6 -->
+        <section class="exercise-section">
+            <h2>Exercise 6: Mouse and Keyboard Events</h2>
+            <div id="ex6">
+                <div id="eventDiv" class="interaction-box wide-box">
+                    Interact with me! (Click, Double-Click, Hover)
+                </div>
+                <input type="text" id="eventInput" placeholder="Type here...">
+                <div id="eventStatus" class="status-msg">Event Status will appear here.</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include external JS script for our exercises -->
+    <script src="script.js"></script>
+</body>
+</html>

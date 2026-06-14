@@ -1,0 +1,336 @@
+/* Exercise 2: CSS Syntax and Comments */
+/* This file contains all reusable styles for the Local Community Event Portal */
+
+/* =========================================
+   Global & Animations (Senior Dev Upgrades)
+   ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(0, 86, 179, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 86, 179, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 86, 179, 0); }
+}
+
+/* =========================================
+   Exercise 3: Selectors Playground
+   ========================================= */
+
+/* Universal selector: reset margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Exercise 5: Typography (Font-family applied globally) */
+body {
+    font-family: 'Outfit', sans-serif;
+    color: #333333; /* HEX Color */
+    line-height: 1.6;
+}
+
+/* Element selector: Style all h2 elements */
+h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Grouping selector: Apply common styles to h3 and p */
+h3, p {
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #0056b3;
+}
+
+/* ID selector: #mainHeader for the banner */
+#mainHeader {
+    /* Exercise 4: Color & Background (RGBA and Gradient) */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(248, 250, 252, 0.85)), url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #0f172a; /* HEX Color */
+    text-align: center;
+    padding: 80px 20px;
+    /* Exercise 10: Use flexible units (vw) */
+    width: 100vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #bae6fd;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #555555;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* =========================================
+   Exercise 4: Color & Background Styling
+   ========================================= */
+.section-header {
+    /* Apply gradients to section headers */
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+}
+
+/* =========================================
+   Exercise 5: Typography
+   ========================================= */
+.description {
+    font-style: italic;
+    font-size: 1.05rem;
+    font-weight: 400;
+    text-align: justify;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    color: #555555;
+}
+
+/* =========================================
+   Exercise 6: Link and List Styling
+   ========================================= */
+.main-nav {
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    /* Remove bullets from nav menus */
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex; /* Bonus: Try Flexbox for responsive layout */
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-nav li {
+    /* Add padding and margin to list items */
+    margin: 0 10px;
+    padding: 5px;
+}
+
+/* Style links with pseudo-classes */
+.main-nav a:link, .main-nav a:visited {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffffff;
+    background-color: #0056b3;
+}
+.main-nav a:active {
+    background-color: #004494;
+}
+
+/* =========================================
+   Exercise 7: Table Styling
+   ========================================= */
+.admin-table {
+    width: 100%;
+    /* border-collapse */
+    border-collapse: collapse; 
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+/* Style table, th, td */
+.admin-table th, .admin-table td {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    /* text-align: center */
+    text-align: center;
+}
+
+.admin-table th {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Zebra striping to rows */
+.admin-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* =========================================
+   Exercise 8: Box Model & Layout Control
+   ========================================= */
+.container {
+    /* Use % for flexible layouts */
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Class selector: .eventCard */
+.eventCard {
+    /* Add border, padding, and margin */
+    border: 2px solid #e9ecef;
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #0056b3;
+}
+
+/* Add outline to highlight selected fields */
+.form-section form {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.subscribe-input {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex: 1;
+}
+.subscribe-input:focus {
+    /* Using outline */
+    outline: 3px solid rgba(0, 86, 179, 0.25);
+    border-color: #0056b3;
+}
+
+/* Compare visibility: hidden vs display: none */
+.box {
+    background-color: #28a745;
+    padding: 15px;
+    margin: 10px 0;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+.hidden-box {
+    visibility: hidden; /* Takes up layout space */
+}
+.none-box {
+    display: none; /* Removed from layout completely */
+}
+
+/* =========================================
+   Exercise 9: Multiple Columns in Text
+   ========================================= */
+.news-article {
+    /* Create a news article section */
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    text-align: justify;
+    color: #444;
+}
+
+/* CSS3 Drop Cap for the first letter of the bulletin (Newspaper effect) */
+.news-article p:first-of-type::first-letter {
+    font-size: 3.5rem;
+    float: left;
+    margin-right: 8px;
+    line-height: 0.9;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn:hover {
+    background-color: #004494;
+    transform: scale(1.05);
+    animation: pulseGlow 1.5s infinite;
+}
+
+/* =========================================
+   Exercise 10: Responsive Web Design 
+   ========================================= */
+.event-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.eventCard {
+    flex: 1; /* Flexible item */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Stack navigation links vertically */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    /* Reduce font sizes */
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    #mainHeader h1 {
+        font-size: 2rem;
+    }
+    
+    /* Stack flex elements vertically */
+    .event-grid {
+        flex-direction: column;
+    }
+    
+    /* Drop columns to 1 on mobile */
+    .news-article {
+        column-count: 1;
+    }
+    
+    .form-section form {
+        flex-direction: column;
+    }
+}

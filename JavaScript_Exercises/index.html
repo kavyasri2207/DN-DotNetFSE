@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 14. jQuery and JS Frameworks: Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Local Community Event Portal</h1>
+    </header>
+    
+    <main>
+        <section id="search-section">
+            <input type="text" id="searchInput" placeholder="Search events by name...">
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Music">Music</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Sports">Sports</option>
+                <option value="Food">Food</option>
+            </select>
+        </section>
+
+        <section id="registration-section">
+            <h2>Register for an Event</h2>
+            <!-- 11. Working with Forms -->
+            <form id="registrationForm">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div>
+                    <label for="eventSelect">Select Event:</label>
+                    <select id="eventSelect" name="eventSelect">
+                        <!-- Options populated by JS -->
+                    </select>
+                    <span class="error" id="eventSelectError"></span>
+                </div>
+                <button type="submit" id="submitBtn">Submit Registration</button>
+                <button type="button" id="registerBtn">Toggle Cards (jQuery)</button>
+            </form>
+            <div id="formMessage" style="margin-top: 1rem; font-weight: bold;"></div>
+        </section>
+
+        <section>
+            <h2>Upcoming Events <span id="loadingSpinner" style="display: none;">Loading Data...</span></h2>
+            <div id="eventsContainer">
+                <!-- Event cards rendered here -->
+            </div>
+        </section>
+        
+        <section>
+             <h2>Debug Outputs</h2>
+             <div id="debugContainer" style="font-family: monospace; background: #eee; padding: 1rem; border-radius: 4px; max-height: 200px; overflow-y: auto;">
+                 <!-- Console output mirrored here for easier grading -->
+             </div>
+        </section>
+    </main>
+
+    <!-- 1. JavaScript Basics & Setup -->
+    <script src="main.js"></script>
+</body>
+</html>

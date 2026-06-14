@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <!-- Exercise 5: Typography - Include Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Exercise 1: CSS Inclusion Methods - External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Exercise 1: CSS Inclusion Methods - Embedded Style -->
+    <style>
+        /* Exercise 4: Embedded style setting body background with fallback color and image */
+        body {
+            /* Fallback color */
+            background-color: #e9ecef;
+            /* Background image with a light overlay so text is readable */
+            background-image: linear-gradient(rgba(233, 236, 239, 0.85), rgba(233, 236, 239, 0.85)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            /* Ensures background is visible while scrolling */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Exercise 3: ID Selector (#mainHeader) -->
+    <header id="mainHeader">
+        <div class="header-content">
+            <!-- Exercise 1: CSS Inclusion Methods - Inline Style -->
+            <h1 style="color: red;">Citywide Local Community Events</h1>
+            <p>Your one-stop portal for everything happening in town.</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#events">Upcoming Events</a></li>
+                <li><a href="#bulletin">Community Bulletin</a></li>
+                <li><a href="#admin">Admin View</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Exercise 8: Compare visibility: hidden vs display: none -->
+        <section class="visibility-test">
+            <h3>Box Model: Visibility Test</h3>
+            <p>Below is a box with <code>visibility: hidden;</code> (Takes up space)</p>
+            <div class="box hidden-box">I am hidden but taking up space!</div>
+            <p>Below is a box with <code>display: none;</code> (Does NOT take up space)</p>
+            <div class="box none-box">I am completely removed from layout!</div>
+            <p>Notice the gap above? That's the hidden box.</p>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section-header">
+            <!-- Exercise 3: Element Selector (h2) -->
+            <h2>Upcoming Events</h2>
+
+            <div class="event-grid">
+                <!-- Exercise 3: Class Selector (.eventCard) -->
+                <!-- Exercise 8: Box Model (padding, border, margin on .eventCard) -->
+                <div class="eventCard">
+                    <!-- Exercise 3: Grouping Selector (h3, p) -->
+                    <h3>Summer Music Festival</h3>
+                    <!-- Exercise 5: Typography (text-align, text-transform, letter-spacing, line-height) -->
+                    <p class="description">Join us for a spectacular weekend of live music, local food trucks, and
+                        family fun at the central park. Everyone is welcome to enjoy the sunny days!</p>
+
+                    <!-- Hidden content that reveals on click -->
+                    <div id="extraContent1"
+                        style="display: none; margin-bottom: 15px; padding-top: 15px; border-top: 1px solid #e9ecef; color: #444; font-size: 0.95rem;">
+                        <strong>Date:</strong> August 12-14, 2026<br>
+                        <strong>Location:</strong> Central Park Main Stage<br>
+                        <strong>Admission:</strong> Free for all city residents! Bring your own lawn chairs.
+                    </div>
+
+                    <a href="javascript:void(0);" class="btn"
+                        onclick="const content = document.getElementById('extraContent1'); if(content.style.display === 'none') { content.style.display = 'block'; this.innerText = 'Show Less'; } else { content.style.display = 'none'; this.innerText = 'Learn More'; }">Learn
+                        More</a>
+                </div>
+
+                <div class="eventCard">
+                    <h3>Farmers Market</h3>
+                    <p class="description">Support local farmers and artisans. Fresh produce, handmade crafts, and
+                        community spirit every saturday morning downtown.</p>
+
+                    <!-- Hidden content that reveals on click -->
+                    <div id="extraContent2"
+                        style="display: none; margin-bottom: 15px; padding-top: 15px; border-top: 1px solid #e9ecef; color: #444; font-size: 0.95rem;">
+                        <strong>Date:</strong> Every Saturday Morning<br>
+                        <strong>Location:</strong> Downtown Market Square<br>
+                        <strong>Details:</strong> Over 50 local vendors! Free parking available at the East Garage.
+                    </div>
+
+                    <a href="javascript:void(0);" class="btn"
+                        onclick="const content = document.getElementById('extraContent2'); if(content.style.display === 'none') { content.style.display = 'block'; this.innerText = 'Show Less'; } else { content.style.display = 'none'; this.innerText = 'Learn More'; }">Learn
+                        More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise 9: Multiple Columns in Text -->
+        <section id="bulletin" class="section-header">
+            <h2>Community Bulletin</h2>
+            <div class="news-article">
+                <p>Welcome to the weekly community bulletin! Here you will find all the latest updates regarding
+                    neighborhood watch programs, city council meetings, and volunteer opportunities. We are incredibly
+                    proud of the recent park cleanup initiative which brought together over 200 volunteers.</p>
+                <p>In other news, the new community center will be opening its doors next month. We expect a large
+                    turnout for the ribbon-cutting ceremony. The center features state-of-the-art sports facilities,
+                    meeting rooms, and a public library annex. Please remember to renew your local pool passes before
+                    the summer season starts, as lines can get very long.</p>
+            </div>
+        </section>
+
+        <!-- Exercise 7: Table Styling -->
+        <section id="admin" class="section-header">
+            <h2>Events Admin Dashboard</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Event ID</th>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>Summer Music Festival</td>
+                        <td>Aug 12, 2026</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>Farmers Market</td>
+                        <td>Aug 15, 2026</td>
+                        <td>Recurring</td>
+                    </tr>
+                    <tr>
+                        <td>#1003</td>
+                        <td>Park Cleanup</td>
+                        <td>Aug 20, 2026</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>#1004</td>
+                        <td>City Marathon</td>
+                        <td>Sep 05, 2026</td>
+                        <td>Planning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Exercise 8: Outline on form fields -->
+        <section class="form-section section-header">
+            <h2>Subscribe to Updates</h2>
+            <p class="description" style="margin-bottom: 15px;">Join 5,000+ residents who receive our weekly community
+                newsletter.</p>
+            <form onsubmit="event.preventDefault();">
+                <input type="text" placeholder="Your Name" class="subscribe-input" required>
+                <input type="email" placeholder="Your Email" class="subscribe-input" required>
+                <button type="submit" class="btn"
+                    onclick="if(this.form.checkValidity()){ const btn=this; const original=btn.innerHTML; btn.innerHTML='Subscribed! ✓'; btn.style.backgroundColor='#28a745'; setTimeout(()=>{btn.innerHTML=original; btn.style.backgroundColor='';}, 2500); }">Subscribe</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer style="text-align: center; padding: 20px; color: #64748b; margin-top: 40px;">
+        <p>&copy; 2026 Local Community Portal. Designed with CSS3.</p>
+    </footer>
+
+</body>
+
+</html>

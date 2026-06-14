@@ -1,0 +1,8 @@
+// Exercise 19.2: Customize primary colors and border radius via _variables.scss
+
+// 1. Override default variables
+$primary: #6f42c1; // Custom purple color for primary
+$border-radius: 1rem; // Custom border radius
+
+// 2. Import Bootstrap SCSS (assuming it's installed via npm)
+@import "../node_modules/bootstrap/scss/bootstrap";
