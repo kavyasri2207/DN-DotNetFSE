@@ -1,19 +1,5 @@
-# HTML5 Assessment - Community Events Website
+![](./screenshots/Screenshot%202026-06-19%20142509.png)
 
-## Overview
-A community events management website built with HTML5, showcasing event promotions, galleries, and registration functionality.
+![](./screenshots/Screenshot%202026-06-19%20142537.png)
 
-## Screenshots
-
-### Home Page
-Welcome section with event promotions and special announcements
-
-### Events Gallery
-Past events gallery with image highlights from recent city events
-
-### Registration Page
-Event registration form for users to sign up for events
-
-## Files
-- `index.html` - Home page
-- `help.html` - Help center
+![](./screenshots/Screenshot%202026-06-19%20142604.png)
