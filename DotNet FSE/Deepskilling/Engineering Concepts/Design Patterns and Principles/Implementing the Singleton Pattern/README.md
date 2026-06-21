@@ -31,6 +31,4 @@ Explanation
   - Test 2 checks that using different references to the same `Logger` shares internal state (log count and messages).
   - Test 3 stresses the implementation under concurrency to detect any race conditions.
 
-- The final message confirms all checks passed.
--btjtrkuigfj derjkgkjengkjeriughue.                                                                                                               
-  - vkjngvnbvkjd leniperjgferfke er
+- The final message confirms all checks passed.                                                                                                          
