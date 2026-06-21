@@ -1,22 +1,34 @@
-public class Logger {
-    // 2. Define a Singleton Class: private static instance of itself
-    private static Logger instance;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
-    // Ensure the constructor of Logger is private
+public class Logger {
+    private static volatile Logger instance;
+    private List<String> logs;
+
     private Logger() {
-        // Private constructor prevents instantiation from other classes
+        System.out.println("[Logger] Initializing the single Logger instance...");
+        logs = new ArrayList<>();
     }
 
-    // Provide a public static method to get the instance of the Logger class
     public static Logger getInstance() {
         if (instance == null) {
-            instance = new Logger();
+            synchronized (Logger.class) {
+                if (instance == null) {
+                    instance = new Logger();
+                }
+            }
         }
         return instance;
     }
 
-    // A sample method to demonstrate the logger's functionality
     public void log(String message) {
-        System.out.println("[LOG]: " + message);
+        String entry = "[" + LocalDateTime.now().toString() + "] " + message;
+        System.out.println(entry);
+        logs.add(entry);
+    }
+    
+    public int getLogCount() {
+        return logs.size();
     }
 }
