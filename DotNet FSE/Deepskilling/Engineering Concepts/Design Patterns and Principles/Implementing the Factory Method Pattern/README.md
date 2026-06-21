@@ -1,14 +1,23 @@
 # Implementing the Factory Method Pattern
 
-This folder shows a working Factory Method example. The screenshot you shared confirms the program runs correctly and creates three document types through their factories: Word, PDF, and Excel.
+This folder contains the Factory Method example and the exact terminal output from running it. It shows that the program creates Word, PDF, and Excel documents through their factories and finishes with a success message.
 
-What the output proves:
-- Each document type is created through its matching factory.
-- The program opens, saves, and closes each document in sequence.
-- The final line confirms the pattern works as expected.
-
-Final result from the run:
+Run output:
 
 ```text
+--- Factory Method Pattern Test ---
+
+Opening Word Document...
+Saving Word Document...
+Closing Word Document...
+
+Opening PDF Document...
+Saving PDF Document...
+Closing PDF Document...
+
+Opening Excel Document...
+Saving Excel Document...
+Closing Excel Document...
+
 ALL TESTS PASSED: Documents created successfully using Factory Method.
 ```
