@@ -32,5 +32,5 @@ Explanation
   - Test 3 stresses the implementation under concurrency to detect any race conditions.
 
 - The final message confirms all checks passed.
-
-If you'd like, I can also add the actual terminal screenshot file to this folder (e.g. `singleton-run.png`) so the visual output is stored alongside this README. Would you like me to add it?
+-in
+  -jkln
