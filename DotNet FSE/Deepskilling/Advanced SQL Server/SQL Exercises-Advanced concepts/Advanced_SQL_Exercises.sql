@@ -1,9 +1,5 @@
 -- =========================================================================================
--- Advanced SQL Exercises for Online Retail Store (T-SQL / SQL Server)
--- =========================================================================================
-
--- =========================================================================================
--- Exercise 1: Ranking and Window Functions
+-- Ranking and Window Functions
 -- Goal: Find the top 3 most expensive products in each category using ranking functions.
 -- =========================================================================================
 
