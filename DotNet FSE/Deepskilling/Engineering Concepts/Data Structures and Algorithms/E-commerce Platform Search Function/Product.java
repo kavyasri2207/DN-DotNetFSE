@@ -1,7 +1,11 @@
+/**
+ * Represents a product in the E-commerce platform.
+ * Implements Comparable to allow sorting by Product ID, which is a prerequisite for Binary Search.
+ */
 public class Product implements Comparable<Product> {
-    private int productId;
-    private String productName;
-    private String category;
+    private final int productId;
+    private final String productName;
+    private final String category;
 
     public Product(int productId, String productName, String category) {
         this.productId = productId;
@@ -15,11 +19,12 @@ public class Product implements Comparable<Product> {
 
     @Override
     public int compareTo(Product other) {
+        // Essential for Arrays.sort() to arrange products by ID in ascending order
         return Integer.compare(this.productId, other.productId);
     }
 
     @Override
     public String toString() {
-        return "Product[ID=" + productId + ", Name='" + productName + "', Category='" + category + "']";
+        return String.format("Product [ID=%d, Name='%s', Category='%s']", productId, productName, category);
     }
 }
