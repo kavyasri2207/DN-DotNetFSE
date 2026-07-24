@@ -5,6 +5,14 @@ This repository contains the implementation of the **Student Course Portal** for
 ---
 
 ## 🛠️ Hands-On 1: Environment Setup & Project Structure
+
+### Objectives:
+*   Angular CLI & Workspace Setup
+*   Angular Project Structure & Files
+*   Running & Building Angular Apps
+*   Creating Components
+*   Angular Module Overview
+
 In this exercise, the foundational Angular workspace was scaffolded and configured for a modern, standalone-component architecture.
 
 ### Key Implementations:
@@ -20,6 +28,15 @@ In this exercise, the foundational Angular workspace was scaffolded and configur
 ---
 
 ## 🔄 Hands-On 2: Data Binding & Component Communication
+
+### Objectives:
+*   Property Binding
+*   Event Binding
+*   Two-Way Binding (ngModel)
+*   Lifecycle Hooks (ngOnInit, ngOnChanges, ngOnDestroy)
+*   @Input and @Output Decorators
+*   EventEmitter
+
 In this exercise, interactivity was added to the portal using Angular's powerful data-binding mechanisms and lifecycle hooks.
 
 ### Key Implementations:
@@ -35,3 +52,11 @@ In this exercise, interactivity was added to the portal using Angular's powerful
    * Created a custom `CourseCardComponent` designed to accept data downwards from a parent via the `@Input() course` decorator.
    * Configured the child card to emit an `enrollRequested` event upwards via the `@Output()` decorator using an `EventEmitter<number>`.
    * Configured the parent `CourseListComponent` to loop through 5 courses using `*ngFor`, dynamically passing data down into each card, and listening for the emitted events to display the selected course ID on the screen.
+
+---
+
+## 📸 Simulated Output (Visual Verification)
+
+Here is a visual mockup verifying that the Angular UI is correctly rendering the dynamic Data Bindings, the styled Navigation Bar, and the structural layouts implemented in Hands-On 1 & 2!
+
+![Angular Portal Mockup](./assets/angular_portal_mockup.png)
