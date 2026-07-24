@@ -1,0 +1,16 @@
+// Feature: User Authentication System
+// This file represents the new feature developed in the 'GitNewBranch' branch.
+
+function authenticateUser(username, password) {
+    if (username === "admin" && password === "secret123") {
+        console.log("Authentication successful! Welcome to the system.");
+        return true;
+    } else {
+        console.log("Error: Invalid credentials.");
+        return false;
+    }
+}
+
+// Initialize feature
+console.log("Loading new authentication feature...");
+authenticateUser("admin", "secret123");
